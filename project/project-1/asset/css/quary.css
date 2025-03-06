@@ -1,0 +1,29 @@
+
+
+@media(max-width:992px){
+  .contianer {
+    max-width: 800px;
+    /* border: 2px solid black; */
+    margin: auto;
+  }
+  .navbar{
+    margin-top: 0px;
+  }
+  .navitems{
+    display: none;
+  }
+  .navbar .icons .mobilemenu{
+    display: block;
+   i{
+    color: black;
+   }
+  }
+}
+
+
+@media(max-width:390px){
+  .navbar .icons .social-icons {
+   display: flex;
+   flex-wrap: wrap;
+  }
+}
