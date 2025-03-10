@@ -18,6 +18,25 @@
     color: black;
    }
   }
+
+ .home-page{
+  justify-content: center;
+  align-items: center;
+  .home-page-content{
+    .home-page-heding{
+      text-align: center;
+      h1{
+        font-size:39px;
+      }
+    }
+    .home-page-describe{
+      text-align: center;
+    }
+    .hoem-page-button{
+      justify-content: center;
+    }
+  } 
+ } 
 }
 
 
