@@ -106,7 +106,7 @@
     //  console.log("CGST (9%)    :",cgst);
     //  console.log("Total bill   :",totalamount);
 
-
+     
 
     // 5. WAP TO FIND OUT AREA OF TRIANGLE;
 
@@ -164,3 +164,18 @@
 
     // console.log("Fehernhit:",fehernhit)
  
+
+
+// Your name (or how you'd like to be addressed).
+
+// What you do (e.g., student, professional, entrepreneur, etc.).
+
+// Key background info (e.g., your education, experience, interests).
+
+// Purpose of the introduction (e.g., for a class, interview, networking, social media).
+
+// Tone you want (formal, friendly, confident, etc.).
+
+
+
+// "Hi, my name is Darshik Shekhada. I'm from Surat and currently studying at Red & White Skill Education. I'm pursuing a course in Full Stack Development
