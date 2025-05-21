@@ -348,19 +348,19 @@ syntex
         // }
 
 
-        // 6 PRINT X 2000-3000; AND Y = 100-500;
+        // 6 PRINT X <2000 and >3000; AND Y = >100 and <500;
 
-        let x=4000 ,y=400;
+        // let x=4000 ,y=400;
            
-        if (x<2000 || x>3000)
-          {
-            console.log("X=",x);
-          }   else{
-              console.log("X is not criterion")
-          }
+        // if (x<2000 || x>3000)
+        //   {
+        //     console.log("X=",x);
+        //   }   else{
+        //       console.log("X is not criterion")
+        //   }
 
-          if (y>=100 &&y<=500) {
-            console.log("Y=",y);
-          } else{
-              console.log("Y is not criterion")
-          }
+        //   if (y>=100 &&y<=500) {
+        //     console.log("Y=",y);
+        //   } else{
+        //       console.log("Y is not criterion")
+        //   }
