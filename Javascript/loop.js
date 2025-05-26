@@ -178,4 +178,114 @@
   //         i++;
   //  }
 
+// 13. Program to sum of digits
+
+    //  let num = 12345;
+    //  let total = 0;
+    //  while(num!=0){
+    //       total += num%10;
+    //       num =Math.floor( num/10); 
+    //  }
+    //  console.log(total);
+
+
+
+
+    // continus statment 
+
+        // for(let i = 10;i<=50;i++){
+        //   if(i == 20||  i ==30 ||i==40){
+        //     continue; skip 
+        //   }
+        //     console.log(i)
+        // }
+
+
+
+  // pattern
+
+
+//    let i,j;
+//    for(i = 1;i<=5;i++){
+//        let str = " "
+//       for(j=1;j<=5;j++){
+//           str +=i + " ";
+//       }
+//       console.log(str)
+//      }
+
+
+
+// 1.Print rever of digits 
+
+    //  let digit = 1234;
+    //  let total
+    //      let str = " ";
+    //  while(digit>0){
+    //       total = digit %10;
+    //        str +=total;
+    //        digit = Math.floor(digit/10); 
+    //  }
+    //   console.log(str)
+
+
+
+
+//  Palindrome Numbers
+
+
+    // let number  = 1212;
+    // let digits  = number;
+    // let revers;
+    // let str = ""
+
+    //   while(digits!=0){
+    //     revers = digits%10;
+    //     str += revers;
+    //     digits = Math.floor(digits/10);
+    //   }
+ 
+    //    if(number == str){
+    //        console.log(number,"this is palidrome number")
+    //        console.log(str)
+    //        console.log(number)
+    //    }else{
+    //        console.log(number,"this is not palidrome number")
+    // console.log(str)
+    //        console.log(number)
+    //    }
+
+
+// Armstrong  number 
+   let num = 370;
+   let number = num;
+   let digit = num;
+   let count=0;
+   let sum = 0;
+   while(num!=0){
+      num = Math.floor(num/10);
+      count++;
+   }
+
+    while(number!=0){
+        let pwr = number%10;
+        // sum+= Math.pow(pwr,count)
+        sum+= pwr*pwr*pwr;
+        number = Math.floor(number/10);
+    }
+
+    if(digit==sum){
+        console.log(digit,"This is armstrong num");
+    } else{
+        console.log(digit,"This is not armstrong  num");
+
+    }
+    
+
+    
+
+
+    
+
+
 
