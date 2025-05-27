@@ -214,9 +214,9 @@
 //       console.log(str)
 //      }
 
+         
 
-
-// 1.Print rever of digits 
+// 1.Print reverse of digits 
 
     //  let digit = 1234;
     //  let total
@@ -257,29 +257,29 @@
 
 
 // Armstrong  number 
-   let num = 370;
-   let number = num;
-   let digit = num;
-   let count=0;
-   let sum = 0;
-   while(num!=0){
-      num = Math.floor(num/10);
-      count++;
-   }
+//    let num = 370;
+//    let number = num;
+//    let digit = num;
+//    let count=0;
+//    let sum = 0;
+//    while(num!=0){
+//       num = Math.floor(num/10);
+//       count++;
+//    }
 
-    while(number!=0){
-        let pwr = number%10;
-        // sum+= Math.pow(pwr,count)
-        sum+= pwr*pwr*pwr;
-        number = Math.floor(number/10);
-    }
+//     while(number!=0){
+//         let pwr = number%10;
+//         // sum+= Math.pow(pwr,count)
+//         sum+= pwr*pwr*pwr;
+//         number = Math.floor(number/10);
+//     }
 
-    if(digit==sum){
-        console.log(digit,"This is armstrong num");
-    } else{
-        console.log(digit,"This is not armstrong  num");
+//     if(digit==sum){
+//         console.log(digit,"This is armstrong num");
+//     } else{
+//         console.log(digit,"This is not armstrong  num");
 
-    }
+//     }
     
 
     
