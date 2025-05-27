@@ -212,7 +212,7 @@
         //    1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 = 385
 
 
-    // 10. Write a JAVASCRIPT Program that displays below pattern using nested for loop 
+// 10. Write a JAVASCRIPT Program that displays below pattern using nested for loop 
                                       // 5 
                                       // 5 4 
                                       // 5 4 3 
