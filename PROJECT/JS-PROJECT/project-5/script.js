@@ -208,7 +208,7 @@
 
 // let name = "darshik"
 // let length = name.length;
-// console.log(`my name langht is: ${length }`)
+// console.log(`my name langht is: ${length}`)
 
 // OUTPUT 
 // my name langht is: 7
