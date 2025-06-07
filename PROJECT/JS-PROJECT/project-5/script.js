@@ -134,9 +134,9 @@
 
 
 
-// 8. Write a JavaScript program which filters out any string which is less than 8 characters. 
+// 8. Write a JavaScript program which filters out any string which is less than 8 characters.
+
 // let words = ['Python', 'Javascript', 'Go', 'Java', 'PHP', 'Ruby']; 
-// console.log(words)
 
 // let less8 =   words.filter((ele)=>ele.length<8)
 // console.log(less8)
@@ -246,3 +246,18 @@
 // OUTPUT:
 // // 5,32, Daniel 
        
+
+
+
+
+
+
+
+
+
+
+let a = ['M', 'e', 'e', 't'];
+let asciiValues = a.map((ele,i)=>{
+    return ele.charCodeAt(0);
+});
+console.log(asciiValues);
