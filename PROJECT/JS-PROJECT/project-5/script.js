@@ -206,9 +206,9 @@
 // 12. write a JavaScript program to print your name and write the number of total characters. 
 
 
-let myname = "darshikbhai jentibhai shekhada"
- myname  = myname.trim().split(" ").join("");
-console.log(`my name langht is: ${myname.length}`)
+// let myname = "darshikbhai jentibhai shekhada"
+//  myname  = myname.trim().split(" ").join("");
+// console.log(`my name langht is: ${myname.length}`)
 
 // OUTPUT 
 // my name langht is: 7
