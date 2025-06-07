@@ -248,16 +248,3 @@
        
 
 
-
-
-
-
-
-
-
-
-let a = ['M', 'e', 'e', 't'];
-let asciiValues = a.map((ele,i)=>{
-    return ele.charCodeAt(0);
-});
-console.log(asciiValues);
