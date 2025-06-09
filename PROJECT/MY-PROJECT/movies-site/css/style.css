@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* header  */
+.hiden{
+  background-color:#494949 !important;
+}
+
+
+.navbar-nav .nav-item:hover{
+  .dropdown-menu{
+    display: block !important;
+  }
+}
