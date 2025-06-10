@@ -100,3 +100,90 @@
   //   console.log(val)
   // }
 
+
+
+let arr = [
+  { name: "darshik", mno: 9876543210, pwd: "darshik", age: 24 },
+  { name: "amit", mno: 8765432109, pwd: "amit", age: 28 },
+  { name: "rutvik", mno: 7654321098, pwd: "rutvik", age: 22 },
+  { name: "rahul", mno: 6543210987, pwd: "rahul", age: 30 },
+  { name: "priya", mno: 5432109876, pwd: "priya", age: 25 },
+  { name: "neha", mno: 4321098765, pwd: "neha", age: 27 },
+  { name: "sanjay", mno: 3210987654, pwd: "sanjay", age: 32 },
+  { name: "meera", mno: 2109876543, pwd: "meera", age: 21 },
+  { name: "vikram", mno: 1098765432, pwd: "vikram", age: 35 },
+  { name: "anjali", mno: 9988776655, pwd: "anjali", age: 19 },
+  { name: "karan", mno: 8877665544, pwd: "karan", age: 26 },
+  { name: "divya", mno: 7766554433, pwd: "divya", age: 29 },
+  { name: "arjun", mno: 6655443322, pwd: "arjun", age: 33 },
+  { name: "isha", mno: 5544332211, pwd: "isha", age: 23 },
+  { name: "rohan", mno: 4433221100, pwd: "rohan", age: 31 },
+  { name: "tanvi", mno: 3322110099, pwd: "tanvi", age: 20 },
+  { name: "raj", mno: 2211009988, pwd: "raj", age: 36 },
+  { name: "pooja", mno: 1100998877, pwd: "pooja", age: 18 },
+  { name: "manish", mno: 9998887776, pwd: "manish", age: 38 },
+  { name: "sneha", mno: 8887776665, pwd: "sneha", age: 40 }
+];
+
+console.log(arr)
+
+arr[18].pwd = "12345"
+
+let u_name = "pooja"
+let pssword = "pooja"
+let login  = false
+let count =[]
+  for(val of arr){
+     
+    if(val.name==u_name && val.pwd == pssword){
+      login = true
+      count.push(val.name)
+         break;
+        } 
+  }
+
+   if(login){
+     console.log("login success")
+  }  else{
+    console.log("wrong user name and pwd")
+        }
+
+
+        console.log(count)
+
+
+
+
+
+
+
+
+ // global count
+
+// function loginUser(u_name, pssword){
+//     let login = false;
+//     for(let val of arr){
+//         if(val.name == u_name && val.pwd == pssword){
+//             login = true;
+//             count.push(val.name);
+//             break;
+//         }
+//     }
+
+//     if(login){
+//         console.log("Login success");
+//     } else {
+//         console.log("Wrong username or password");
+//     }
+
+//     console.log("Count:", count);
+// }
+
+// // First login
+// // loginUser("sneha", "sneha");
+
+// // Second login
+// loginUser("pooja", "pooja");
+// loginUser("darshik", "darshik");
+
+// // Now count will have ["sneha", "pooja"]
