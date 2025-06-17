@@ -4,7 +4,10 @@
   box-sizing: border-box;
 }
 
-
+body{
+   font-family: 'Roboto Condensed' !important; 
+        font-weight: normal;
+}
 
 /* header  */
 .hiden{
@@ -16,4 +19,14 @@
   .dropdown-menu{
     display: block !important;
   }
+
+
 }
+
+
+  .nav-item .dropdown-menu{
+  background-color:#494949 !important;
+  .dropdown-item:hover{
+      background-color:#413f3f75 !important;
+  }
+  }

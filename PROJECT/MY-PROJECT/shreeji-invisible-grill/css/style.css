@@ -1,0 +1,26 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER  */
+
+/* .home-social-icons a{
+  display: inline-block;
+  transition: transform 0.3s ease;
+} */
+
+.navbar-nav li a:hover{
+    color: rgba(131, 30, 30, 0.435);
+    font-weight: bold;
+}
+
+.home-social-icons a:hover {
+  display: inline-block;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  
+}
