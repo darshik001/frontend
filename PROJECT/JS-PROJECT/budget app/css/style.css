@@ -1,0 +1,17 @@
+
+body{
+  background-image: url('../img/bg-budget-app.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-clip: content-box;
+  height: 100vh;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
