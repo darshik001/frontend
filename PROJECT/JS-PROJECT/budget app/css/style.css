@@ -1,11 +1,10 @@
 
 body{
-  background-image: url('../img/bg-budget-app.jpg');
+  background-image: url('../img/pexels-inspiredimages-157520.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  background-clip: content-box;
-  /* height: 100vh; */
+  background-clip: content-box; 
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -14,4 +13,8 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+
+.edit,.delete {
+  cursor: pointer;
+}
 
