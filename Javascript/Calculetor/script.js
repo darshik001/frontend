@@ -5,6 +5,7 @@ let display = document.querySelector('#display');
 let button = document.querySelectorAll("button");
  let  addstring = ""
 
+
 let apendData = (value)=>{
   addstring +=value
         display.value = addstring
