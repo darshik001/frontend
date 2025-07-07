@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add-To-Cart</title>
+  <link rel="stylesheet" href="font/bt-icons-1.11.3/font/bootstrap-icons.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+ 
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">FINIZI</a>
+
+      <!-- Offcanvas Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Offcanvas Menu -->
+      <div class="offcanvas offcanvas-start flex-grow-0" id="mobileMenu">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="nav flex-row" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#viewproduct" role="tab">
+                <i class="bi bi-house-door me-2"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="modal" href="#exampleModal">
+                <i class="bi bi-plus-circle me-2"></i>Add Product
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-icon" data-bs-toggle="tab" href="#viewcartproduct" role="tab">
+                <i class="bi bi-cart3 me-2"></i><span class="cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <main class="tab-content">
+
+
+     <!-- add product form modal  -->
+    <section>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-plus-circle me-2"></i>Add New Product
+              </h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="addProductForm">
+                <div class="row">
+                  <!-- Product Information -->
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="productName" class="form-label">Product Name <span
+                          class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="productName" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="productCategory" class="form-label">Category <span
+                          class="text-danger">*</span></label>
+                      <select class="form-select" id="productCategory" required>
+                        <option value="" selected disabled>Select category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="books">Books</option>
+                        <option value="home">Home & Garden</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+
+
+                  </div>
+
+                  <!-- Product Details -->
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="productImage" class="form-label">Product Image<span
+                          class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="productImage" accept="image/*" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="productPrice" class="form-label">Price ($) <span class="text-danger">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" id="productPrice" step="0.01" min="0" required>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Product Description -->
+                <div class="mb-3">
+                  <label for="productDescription" class="form-label">Description<span
+                      class="text-danger">*</span></label>
+                  <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+                </div>
+
+                <!-- Specifications -->
+
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" form="addProductForm" class="btn btn-primary">Add Product</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- show product  -->
+    <section class="tab-pane fade show active" id="viewproduct">
+      <div class="container">
+        <h2 class="my-4 text-center">Products</h2>
+        <div class="row" id="productsContainer">
+        </div>
+      </div>
+    </section>
+
+   <!-- cart section  -->
+    <section class="tab-pane" id="viewcartproduct">
+     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum veritatis iste ipsum voluptates inventore deleniti nihil sed. Soluta cupiditate mollitia accusamus dignissimos quam? Nesciunt, laudantium animi? Odit corporis, obcaecati quibusdam non aliquam est, quasi animi id vel amet suscipit cupiditate aliquid veniam architecto fugiat, ratione maxime nostrum repellat sed natus! Voluptatibus molestiae iure amet aliquam pariatur magni! Qui odio id laboriosam quasi. Tempora, labore. Libero, expedita tempore. Ad rem autem labore quidem qui vero, quam ipsum, quisquam, quo iste nisi a accusantium consequatur iusto odio illum? Iure voluptate dolore quisquam, saepe commodi id incidunt. Quibusdam repudiandae sequi quo laudantium eum?</div>
+    </section>
+
+  </main>
+
+
+
+
+  <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
