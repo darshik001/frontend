@@ -40,7 +40,7 @@ let viewProducts  =()=>{
   
 let data = ''
      products.forEach((product,index) => {
-          let obj = `<div class="col-6 col-md-4 col-lg-3">
+          let obj = `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
           <div class="card product-card h-100">
               <img src="${product.Image}" class="card-img-top product-img" height="250" alt="${product.name}">
               <div class="card-body">
@@ -67,17 +67,20 @@ viewProducts()
 let addtocart = (id)=>{
   let products = JSON.parse(localStorage.getItem('products'));
   let cartproducts = JSON.parse(localStorage.getItem("cartproducts")) || []
-  // console.log(products)
   let exist = false
-  cartproducts.forEach((product)=>{
+  cartproducts.forEach((product,index)=>{
       if (product.id === products[id].id) {
         exist = true
-        // cartindex++
+        cartproducts[index].quty = Number(cartproducts[index].quty) + 1
+        localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
+    viewcartproducts()
+
       }
   })
 
 
    if(exist === false){
+      products[id].quty = 1
     cartproducts.push(products[id])
     localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
     cartproductcount()
@@ -97,27 +100,31 @@ cartproductcount()
 
  let viewcartproducts = ()=>{
   let cartproducts = JSON.parse(localStorage.getItem("cartproducts")) || []
+     if(cartproducts.length == 0){
+      cartcontainer.innerHTML = `<h2 class="text-center">Cart Empty</h2>`
+     }  else{
 let data = "";
 cartproducts.forEach((element,index)=>{
      let row = `
-         <div class="card flex-row p-2 mb-2" style="width: 100%;">
-         <div style="width:300px">
+         <div class="card p-2 mb-2" style="width: 100%;">
+         <div class="cart-img-div">
          <img src="${element.Image}" class="cart-img rounded-2" alt="...">
          </div>
-  <div class="card-body px-5 my-auto">
+  <div class="card-body px-2 px-md-5 my-auto">
     <h3 class="card-title text-center">${element.name}</h3>
     <p class="card-text">${element.Description}</p>
     <div class="d-flex justify-content-between mt-2">
       <div class="">
-      <button class="btn btn-outline-primary me-2">-</button>
-      <span class="fw-bold">1</span>
-      <button class="btn btn-outline-primary ms-2">+</button>
+      <button class="btn btn-outline-primary me-2" onclick="quntitydec(${index})">-</button>
+      <span class="fw-bold" id="quntity">${element.quty}</span>
+      <button class="btn btn-outline-primary ms-2" onclick="quntityadd(${index})">+</button>
     </div>
     <div>
-      <h3>₹ ${element.Price}</h3>  
+      <h3>₹ ${element.Price * element.quty}</h3>  
     </div>
     </div>
     <a href="#" class="btn btn-primary mt-4" onclick="removeaddtocart(${index})" >Remove</a>
+    <a href="#" class="btn btn-primary mt-4">Order Now</a>
   </div>
 </div>
      `
@@ -125,6 +132,7 @@ cartproducts.forEach((element,index)=>{
   
 })
   cartcontainer.innerHTML = data
+}
  } 
 
  viewcartproducts()
@@ -137,4 +145,27 @@ cartproducts.forEach((element,index)=>{
     cartproductcount()
     viewcartproducts()
      
+ }
+
+
+ let quntitydec  =  (id)=>{
+  let cartproducts = JSON.parse(localStorage.getItem("cartproducts"))
+    if(cartproducts[id].quty <=1){
+      cartproducts[id].quty =1;
+    }  else{
+      cartproducts[id].quty  =Number(cartproducts[id].quty) - 1 ;
+    localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
+
+    }
+    viewcartproducts()
+
+ }
+
+
+ let quntityadd  =  (id)=>{
+  let cartproducts = JSON.parse(localStorage.getItem("cartproducts"))
+cartproducts[id].quty  = Number(cartproducts[id].quty) + 1
+    localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
+    viewcartproducts()
+
  }

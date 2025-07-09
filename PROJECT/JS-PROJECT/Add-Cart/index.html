@@ -7,6 +7,7 @@
   <title>Add-To-Cart</title>
   <link rel="stylesheet" href="font/bt-icons-1.11.3/font/bootstrap-icons.min.css" type="text/css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 </head>
 
@@ -16,9 +17,11 @@
 
  
 <header>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 w-100 z-1">
     <div class="container">
-      <a class="navbar-brand" href="#">FINIZI</a>
+      <a class="navbar-brand" href="#">
+        <img src="./img/Logo.png" alt="" width="60px">
+      </a>
 
       <!-- Offcanvas Toggler -->
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
@@ -26,7 +29,7 @@
       </button>
 
       <!-- Offcanvas Menu -->
-      <div class="offcanvas offcanvas-start flex-grow-0" id="mobileMenu">
+      <div class="offcanvas offcanvas-start flex-grow-0" data-bs-scroll="true" id="mobileMenu">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -34,7 +37,7 @@
         <div class="offcanvas-body">
           <ul class="nav flex-row" id="myTab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" data-bs-toggle="tab" href="#viewproduct" role="tab">
+              <a class="nav-link active" data-bs-toggle="tab" href="#viewproduct">
                 <i class="bi bi-house-door me-2"></i>Home
               </a>
             </li>
@@ -44,7 +47,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link cart-icon" data-bs-toggle="tab" href="#viewcartproduct" role="tab">
+              <a class="nav-link cart-icon" data-bs-toggle="tab" href="#viewcartproduct" >
                 <i class="bi bi-cart3 me-2"></i><span class="cart-count">0</span>
               </a>
             </li>
@@ -137,6 +140,7 @@
 
     <!-- show product  -->
     <section class="tab-pane fade show active" id="viewproduct">
+      <div class="pb-5"></div>
       <div class="container">
         <h2 class="my-4 text-center">Products</h2>
         <div class="row" id="productsContainer">
@@ -147,6 +151,7 @@
    <!-- cart section  -->
     <section class="tab-pane fade mt-5" id="viewcartproduct">
      <div class="container">
+      <div class="pb-5"></div>
          <div id="cartcontainer">
          </div>
      </div>
