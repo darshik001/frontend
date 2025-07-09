@@ -8,6 +8,7 @@ let productDescription = document.querySelector('#productDescription')
 let productsContainer = document.querySelector('#productsContainer')
 let cartcontainer = document.querySelector("#cartcontainer")
 let cartcount  = document.querySelector(".cart-count")
+let allproductotal = document.querySelector('#allproductotal')
 // add product
 addProductForm.addEventListener('submit',(e)=>{
   e.preventDefault()
@@ -102,8 +103,10 @@ cartproductcount()
   let cartproducts = JSON.parse(localStorage.getItem("cartproducts")) || []
      if(cartproducts.length == 0){
       cartcontainer.innerHTML = `<h2 class="text-center">Cart Empty</h2>`
+      allproductotal.innerHTML = ""
      }  else{
 let data = "";
+let total = 0;
 cartproducts.forEach((element,index)=>{
      let row = `
          <div class="card p-2 mb-2" style="width: 100%;">
@@ -127,11 +130,15 @@ cartproducts.forEach((element,index)=>{
     <a href="#" class="btn btn-primary mt-4">Order Now</a>
   </div>
 </div>
+
      `
+     total += Number(element.Price) * Number(element.quty)
+   
      data += row
   
 })
   cartcontainer.innerHTML = data
+  allproductotal.innerHTML =  `<h4>Total  amount :₹ ${total}</h4>`
 }
  } 
 
