@@ -30,3 +30,9 @@ body{
       background-color:#413f3f75 !important;
   }
   }
+
+
+.card-body{
+
+  min-height: 145px;
+}
