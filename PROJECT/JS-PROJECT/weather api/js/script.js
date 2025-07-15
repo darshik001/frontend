@@ -43,7 +43,7 @@ let weatherfunction = (searchdata) => {
                     <div class="temperature">${Math.floor(data.main.temp)}°C</div>
                     <div class="condition">${data.weather[0].description}</div>
                 </div>
-                <img src="https://cdn.weatherbit.io/static/img/icons/c02d.png" alt="Weather Icon" class="weather-icon">
+                <img src="img/weather.png" alt="Weather Icon" class="weather-icon">
             </div>            
             <div class="weather-details">
                 <div class="detail-item">
