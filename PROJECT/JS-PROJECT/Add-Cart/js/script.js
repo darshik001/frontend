@@ -139,17 +139,14 @@ let addtocart = (id)=>{
   
 }
 
-  let cartproductcount = ()=>{
-    let cartproducts = JSON.parse(localStorage.getItem("cartproducts"))
-    
-    if( cartproducts == null || cartproducts.length == 0 ){
-      return
-    } else{
-      cartcount.innerHTML = cartproducts.length
-
-    }
-        
+let cartproductcount = ()=>{
+  let cartproducts = JSON.parse(localStorage.getItem("cartproducts"))
+      if (cartproducts && cartproducts.length > 0) {
+    cartcount.innerHTML = cartproducts.length;
+  } else {
+    cartcount.innerHTML = 0;
   }
+}
 
 cartproductcount()
 
