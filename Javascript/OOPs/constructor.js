@@ -13,12 +13,3 @@
 // }
 
 // let obj  = new Test("rakesh");
-
-
-
-
-
-
-
-
-

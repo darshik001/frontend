@@ -28,3 +28,4 @@
     let obj2 = new Test("amit");
     console.log(obj2.b)
     console.log(obj2.name)
+    obj2.sum()
