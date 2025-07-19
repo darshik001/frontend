@@ -65,41 +65,9 @@ viewProducts()
 
 
 // let cartindex = 0
-let addtocart = (id)=>{
-  let products = JSON.parse(localStorage.getItem('products'));
-  let cartproducts = JSON.parse(localStorage.getItem("cartproducts")) || []
-  let exist = false
-  cartproducts.forEach((product,index)=>{
-      if (product.id === products[id].id) {
-        exist = true
-        cartproducts[index].quty = Number(cartproducts[index].quty) + 1
-        localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
-    viewcartproducts()
-
-      }
-  })
 
 
-   if(exist === false){
-      products[id].quty = 1
-    cartproducts.push(products[id])
-    localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
-    cartproductcount()
-    viewcartproducts()
-  }
-  
-  
-}
-
-let cartproductcount = ()=>{
-  let cartproducts = JSON.parse(localStorage.getItem("cartproducts"))
-     cartcount.innerHTML = cartproducts.length
-}
-
-cartproductcount()
-
-
- let viewcartproducts = ()=>{
+let viewcartproducts = ()=>{
   let cartproducts = JSON.parse(localStorage.getItem("cartproducts")) || []
      if(cartproducts.length == 0){
       cartcontainer.innerHTML = `<h2 class="text-center">Cart Empty</h2>`
@@ -143,6 +111,50 @@ cartproducts.forEach((element,index)=>{
  } 
 
  viewcartproducts()
+
+
+let addtocart = (id)=>{
+  let products = JSON.parse(localStorage.getItem('products'));
+  let cartproducts = JSON.parse(localStorage.getItem("cartproducts")) || []
+  let exist = false
+  cartproducts.forEach((product,index)=>{
+      if (product.id === products[id].id) {
+        exist = true
+        cartproducts[index].quty = Number(cartproducts[index].quty) + 1
+        localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
+    viewcartproducts()
+
+      }
+  })
+
+
+   if(exist === false){
+      products[id].quty = 1
+    cartproducts.push(products[id])
+    localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
+    cartproductcount()
+    viewcartproducts()
+  }
+  
+  
+}
+
+  let cartproductcount = ()=>{
+    let cartproducts = JSON.parse(localStorage.getItem("cartproducts"))
+    
+    if( cartproducts == null || cartproducts.length == 0 ){
+      return
+    } else{
+      cartcount.innerHTML = cartproducts.length
+
+    }
+        
+  }
+
+cartproductcount()
+
+
+ 
 
 
  let removeaddtocart  = (id)=>{
